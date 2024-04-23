@@ -44,9 +44,16 @@ namespace GenericTypes
 		}
 		public void GetAllEmployees()
 		{
-			foreach (var item in Employee)
+			if (Employee.Length == 0)
 			{
-				Console.WriteLine($"Name: {item.Name} Surname: {item.Surname} Age: {item.Age}");
+				Console.WriteLine("Istifadeci yoxdur");
+			}
+			else
+			{
+				foreach (var item in Employee)
+				{
+					Console.WriteLine($"Name: {item.Name} Surname: {item.Surname} Age: {item.Age}");
+				}
 			}
 		}
 	}
